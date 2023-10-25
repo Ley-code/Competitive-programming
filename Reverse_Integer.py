@@ -1,15 +1,8 @@
-def reverse(x):   
-        lst = []
-        for i in str(x):
-            lst.append(i)
-        x = lst
-        
-        strs = ""
-        for i in x:
-            strs+=i
-        ans = int(strs)
-        if (ans>((2**31)-1)) or ans < (-(2**31)):
-            print("executed")
+class Solution:
+    def reverse(self, x: int) -> int:
+        y = str(abs(x))
+        y = int(y[::-1])
+        if abs(y)>2**31:
             return 0
-        return ans
-print(reverse(90000))
+        else:
+            return y if x>0 else y*-1
