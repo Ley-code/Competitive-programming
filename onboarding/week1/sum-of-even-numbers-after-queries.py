@@ -11,9 +11,7 @@ class Solution(object):
             nums[index] = nums[index]+val
             if nums[index]%2==0:
                 sums+=nums[index]
-                res.append(sums)
-            else:
-                res.append(sums)
+            res.append(sums)
         return res
 
 
