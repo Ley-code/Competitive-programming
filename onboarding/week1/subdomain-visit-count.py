@@ -11,9 +11,6 @@ class Solution:
                     counterMap[possibleName]+= visited
                 else:
                     counterMap[possibleName] = visited
-        result = []
         for domain,visits in counterMap.items():
-            ans = str(visits) + " " + domain
-            result.append(ans)
-        return result
+            yield f"{visits} {domain}"
 
