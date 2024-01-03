@@ -1,9 +1,6 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        ans = []
-        l = 0
-        r = 0 
-        i = 0
+        l = r = i = 0
         while r<len(chars):
             if chars[r]!=chars[l]:
                 chars[i] = chars[l]
@@ -15,6 +12,7 @@ class Solution:
                         i+=1
                 l = r
             r+=1
+            
         chars[i] = chars[l]
         i+=1
         if r-l > 1:
