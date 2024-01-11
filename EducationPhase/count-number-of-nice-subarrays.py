@@ -7,7 +7,8 @@ class Solution(object):
                 cnt = 0
             while odd == k:
                 cnt+=1
-                odd-=nums[left]&1
+                if nums[left]%2!=0:
+                    odd-=1
                 left+=1
             ans+=cnt
         return ans
