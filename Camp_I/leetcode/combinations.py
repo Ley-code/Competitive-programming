@@ -3,7 +3,6 @@ class Solution:
         ans = []
         def backtrack(nums,combination):
             if len(combination)==k:
-                combination.sort()
                 ans.append(combination)
                 return
             if nums>n:
