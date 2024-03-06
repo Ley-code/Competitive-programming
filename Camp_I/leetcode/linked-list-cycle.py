@@ -7,12 +7,10 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         rabit = head
-        tort = head
+        hare = head
         while rabit and rabit.next:
             rabit = rabit.next.next
-            tort = tort.next
-            if tort==rabit:
+            hare = hare.next
+            if rabit == hare:
                 return True
-        if rabit == tort == head:
-            return False
         return False
